@@ -1,0 +1,13 @@
+{% extends 'expert_panel/base.html' %}
+{% block content %}
+    <div class='row'>
+        <div class='col-md-6'>
+            مسیج ها
+        </div>
+        <div class='col-md-6'>
+            {% for map in expert_map %}
+                <a href="#">{{map.title}}</a><br>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

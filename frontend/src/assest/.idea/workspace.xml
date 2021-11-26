@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abb3d597-eb4c-40a7-a63f-0dc4f26d9b90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/GeospatialFileManager/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/GeospatialFileManager/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/ISA_RapidMapping/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/ISA_RapidMapping/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/ISA_RapidMapping/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/ISA_RapidMapping/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/expert_panel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ISA_RapidMapping/manager_panel/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../plan.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1vxWWPgITAItQv7MhhbUlDWzQ2R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abb3d597-eb4c-40a7-a63f-0dc4f26d9b90" name="Default Changelist" comment="" />
+      <created>1627504331365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627504331365</updated>
+      <workItem from="1627504430886" duration="576000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

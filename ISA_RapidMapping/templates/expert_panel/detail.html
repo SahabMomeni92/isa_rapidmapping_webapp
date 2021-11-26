@@ -1,0 +1,20 @@
+{% extends 'expert_panel/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div>
+        <h1>{{expert_map.title}}</h1>    
+        <form action="{% url 'feedbackForm' %}"  method="post" >
+        {% csrf_token %}
+            <input type="hidden" name='map_id' value = {{ expert_map.pk }}>
+            <input type="hidden" name='postURL' value = {% url 'manager_panel' %}>
+            <input type="radio" name="status" id="f1" value='R'>
+            <label for="f1">رد بشود</label><br>
+            <input type="radio" name="status" id="f2" value='B'>
+            <label for="f2">اصلاح بشود</label><br>
+            <input type="radio" name="status" id="f3" value="O">
+            <label for="f3">تایید می شود</label><br><hr>
+            <textarea name="feedback" id="feedback_id" cols="20" rows="5"></textarea><br>          
+            <button type='sumbit'>ارسال</button>
+        </form>        
+    </div>
+{% endblock content %}

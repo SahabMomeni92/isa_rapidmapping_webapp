@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'yekan';
+    src        : url('../fonts/YekanBakhFaNum-Bold.eot');
+    src        : url('../fonts/YekanBakhFaNum-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakhFaNum-Bold.woff2') format('woff2'),
+        url('../fonts/YekanBakhFaNum-Bold.woff') format('woff');
+    font-weight : bold;
+    font-style  : normal;
+    font-display: swap;
+    /* color:rgb(255, 255, 255)/ */
+}
+
+@font-face {
+    font-family: 'yekan';
+    src        : url('../fonts/YekanBakhFaNum-Medium.eot');
+    src        : url('../fonts/YekanBakhFaNum-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakhFaNum-Medium.woff2') format('woff2'),
+        url('../fonts/YekanBakhFaNum-Medium.woff') format('woff');
+    font-weight : 500;
+    font-style  : normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yekan';
+    src        : url('../fonts/YekanBakhFaNum-Light.eot');
+    src        : url('../fonts/YekanBakhFaNum-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YekanBakhFaNum-Light.woff2') format('woff2'),
+        url('../fonts/YekanBakhFaNum-Light.woff') format('woff');
+    font-weight : normal;
+    font-style  : normal;
+    font-display: swap;
+}
+
+body {
+    font-family: yekan;
+}
+
+.rtl .pr-4.pl-4 {
+    padding-left : 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.ReactModalPortal {
+    direction: ltr;
+}
+
+html .rtl .form-check {
+    padding-right: 1.25rem;
+}
+
+html .rtl .form-check-input {
+    margin-right: -1.25rem;
+    margin-left : inherit;
+}
+
+.rtl .input-group>.form-control:not(:first-child),
+.rtl .input-group>.custom-select:not(:first-child) {
+    border-top-right-radius   : 0;
+    border-bottom-right-radius: 0;
+}
+
+.rtl .input-group>.form-control+.form-control,
+.rtl .input-group>.form-control+.custom-select,
+.rtl .input-group>.form-control+.custom-file,
+.rtl .input-group>.form-control-plaintext+.form-control,
+.rtl .input-group>.form-control-plaintext+.custom-select,
+.rtl .input-group>.form-control-plaintext+.custom-file,
+.rtl .input-group>.custom-select+.form-control,
+.rtl .input-group>.custom-select+.custom-select,
+.rtl .input-group>.custom-select+.custom-file,
+.rtl .input-group>.custom-file+.form-control,
+.rtl .input-group>.custom-file+.custom-select,
+.rtl .input-group>.custom-file+.custom-file {
+    margin-left: inherit;
+    margin-right: -1px;
+}
+
+.rtl .dropleft .dropdown-toggle:before {
+    margin-left: .255em;
+    margin-right: inherit;
+}

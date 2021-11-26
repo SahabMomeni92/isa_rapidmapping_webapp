@@ -1,0 +1,12 @@
+{% extends 'expert_panel/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div>
+        <h3>لیست نقشه های ترسیم شده</h3><br> 
+        {% for map in expert_map %} 
+            <p>نام کارشناس : <span>{{map.expert}}</span></p>
+            <a href="{% url 'expertmap_detail' pk=map.pk %}">{{map.title}}</a>
+            <hr>
+        {% endfor %} 
+    </div>
+{% endblock content %}
