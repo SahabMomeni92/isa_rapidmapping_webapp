@@ -27,4 +27,4 @@ urlpatterns = [
     # path('activate/(?P<uid>[\w-]+)/(?P<token>[\w-]+)/$', UserActivationView.as_view(),name='activationURL'),
 ]
 
-urlpatterns+= [re_path(r'^(?!.*(admin))',TemplateView.as_view(template_name='index.html'))]
+urlpatterns+= [re_path(r'^(?!.*(admin||api))',TemplateView.as_view(template_name='index.html'))]

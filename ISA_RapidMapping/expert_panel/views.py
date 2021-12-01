@@ -29,20 +29,25 @@ class ExpertMap_List(ListAPIView):
 
 class ExpertMap_Detail(APIView):
     permission_classes = [AllowAny,] 
-    parser_classes = [MultiPartParser] 
 
-    def get_object(self, pk):
-        try:
-            return Expert_map.objects.get(pk=pk)
-        except Expert_map.DoesNotExist:
-            raise Http404
+    # def get_object(self, pk):
+    #     try:
+    #         return Expert_map.objects.get(pk=pk)
+    #     except Expert_map.DoesNotExist:
+    #         raise Http404
 
-    def get(self, request, pk, format=None):
-        expert_map = self.get_object(pk)
-        serializer = ExpertMapSerializers(expert_map)
-        return Response(serializer.data)
+    # def get(self, request, pk, format=None):
+    #     expert_map = self.get_object(pk)
+    #     serializer = ExpertMapSerializers(expert_map)
+    #     return Response(serializer.data)
 
+    def get(self,request,pk):
 
+        qs = Expert_map.objects.get(pk=pk)
+
+        serializers = ExpertMapSerializers(qs)
+
+        return Response(serializers.data,status=status.HTTP_200_OK)
     
 
     

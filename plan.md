@@ -17,7 +17,7 @@
 <!-- 1-8 multi users (A+) -->
 <!-- 1-9 get user data (A+) -->
 ------------------------------------
-2-1 import maps images and info (A)
+<!-- 2-1 import maps images and info (A) -->
 <!-- 2-2 ROUTE between panels and design panel (A) -->
 2-3 message (C-)
 ------------------------------------
@@ -32,15 +32,15 @@
 5-2 login page desing (F)
 -----------------------------------
 <!-- 6-1 geoServer api (A+) -->
-6-2 openLayer learning (A)
-6-3 map page (C)
+<!-- 6-2 openLayer learning (A) -->
+<!-- 6-3 map page (C) -->
 6-4 analysis on map (D+)
 <!-- 6-5 import geospatail data (A+) -->
-6-6 show geospatail data (A)
+<!-- 6-6 show geospatail data (A) -->
 6-7 layers SLD (design) (C)
 6-8 customize layer design (D-)
 6-9 identity (C)
-6-10 advanced add geospatial data and geoserver rest api (A-)
+<!-- 6-10 advanced add geospatial data and geoserver rest api (A-) -->
 -----------------------------------
 7-1 charts (D+)
 7-2 export pdf (D+)

@@ -34,7 +34,7 @@ const getStepContent =(step)=>{
     
     switch (step) {
         case 0:
-            // return <Import_Layer  />
+            return <Import_Layer  />
             return <ImportMap_step3/>
         case 1:
             return (
@@ -113,8 +113,9 @@ const Import_map = () => {
                             disabled={activeStep === 0}
                             onClick={handleBack}
                             className={classes.button}
+                            style = {{marginRight:'0.25rem'}}
                         >
-                            <Typography>قبلی</Typography>
+                            <Typography>حذف و بازگشت به مرحله قبلی</Typography>
                         </Button>
                         <Button
                             variant="contained"
@@ -134,9 +135,9 @@ const Import_map = () => {
             </Stepper>
             {activeStep === steps.length && (
                 <Paper square elevation={0} className={classes.resetContainer}>
-                <Typography>All steps completed - you&apos;re finished</Typography>
+                <Typography>فرایند اضافه کردن نقشه به پایان رسیده استت آیا مایل هستید  مجدد متحان کنید؟</Typography>
                 <Button onClick={handleReset} className={classes.button}>
-                    Reset
+                    شروع 
                 </Button>
                 </Paper>
             )}
