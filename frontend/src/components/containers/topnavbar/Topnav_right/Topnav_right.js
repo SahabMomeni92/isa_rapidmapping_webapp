@@ -63,33 +63,7 @@ const Topnav_right = (props) => {
                                     <MenuIcon />
                     </IconButton>            
                         <img src="/images/headerLogo.png" alt="#" className={classes.logo}/>
-                        <Divider orientation="vertical" style={{height:'100%'}}></Divider>
-                        
-                        {/* <Button aria-controls="customized-menu" aria-haspopup="true" variant="outlined"
-                            color='light' className={classes.details_btn} onClick={handleClick}>
-                                
-                                <Typography className={classes.detailsText}>درباره سامانه</Typography>
-                        </Button>    */}
-                        {/* <IconButton aria-controls="customized-menu" aria-haspopup="true" variant="outlined"
-                            color='light' className={classes.RespondSM_details_btn} onClick={handleClick}>
-                                <InfoIcon fontSize="small" />
-                        </IconButton>
-                        <StyledMenu id="customized-menu" anchorEl={anchorEl} 
-                            open={Boolean(anchorEl)} onClose={handleClose}>
-                            <MenuItem className={classes.details_menuItem} >
-                                <ListItemIcon >
-                                    <InfoIcon fontSize="small" />
-                                </ListItemIcon>
-                                <ListItemText  primary="معرفی سامانه" />
-                            </MenuItem>
-                            <MenuItem className={classes.details_menuItem}>
-                                <ListItemIcon >
-                                    <LiveHelpIcon fontSize="small" />
-                                </ListItemIcon>
-                                <ListItemText  primary="آموزش ها" />
-                            </MenuItem>
-                        </StyledMenu>                   */}
-                    {/* <Typography className={classes.SiteName}>سامانه مدیریت نقشه های پایش سریع سازمان فضایی ایران</Typography> */}
+                        <Divider orientation="vertical" style={{width:'1px',color:'black'}}></Divider>
                 </Box>                 
     )
 }

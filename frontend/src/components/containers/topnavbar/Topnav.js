@@ -43,7 +43,7 @@ const Topnav = (props) => {
                              <Toolbar className={classes.topnav_right}>
                                 <Topnav_right ></Topnav_right>
                              </Toolbar>
-                             
+                             {/* <Divider orientation="vertical" style={{marginRight:'35px'}}/> */}
                              <Toolbar className={classes.topnav_center} >
                               {user ===null && <p>...loading</p>}
                                 {user != null && <Topnav_center user={user}></Topnav_center>}                   

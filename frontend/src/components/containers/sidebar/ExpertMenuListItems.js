@@ -9,51 +9,36 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import MapIcon from '@material-ui/icons/Map';
 import ViewListIcon from '@material-ui/icons/ViewList';
 import EventIcon from '@material-ui/icons/Event';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 const ExpertMenuListItems = () => {
     const classes = useStyle()
     return (
         <List >
+            <Divider ></Divider>
             <ListItem button className={classes.ListMenu} >
-                <Tooltip title="صفحه اصلی" >
-                    <ListItemIcon><HomeIcon fontSize='medium'/></ListItemIcon>
+                <Tooltip title="پروفایل کاربری" >
+                    <ListItemIcon><AccountBoxIcon fontSize='medium'/></ListItemIcon>
                 </Tooltip>                
-                <ListItemText primary='صفحه اصلی'>                  
+                <ListItemText primary='پروفایل کاربری'>                  
                 </ListItemText>
             </ListItem>
             <Divider></Divider>
             <ListItem button className={classes.ListMenu} >
                 <ListItemIcon><ListAltIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='لیست نقشه های پایش سریع'>                  
+                <ListItemText primary='مدیریت کاربران'>                  
                 </ListItemText>
             </ListItem>
             <Divider></Divider>
             <ListItem button className={classes.ListMenu} >
                 <ListItemIcon><AddBoxIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='اضافه کردن نقشه پایش سریع'>                  
+                <ListItemText primary=' افزایش سطح دسترسی'>                  
                 </ListItemText>
             </ListItem>
             <Divider></Divider>
             <ListItem button className={classes.ListMenu} >
-                <ListItemIcon><AssignmentIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='گزارش گیری'>                  
-                </ListItemText>
-            </ListItem>
-            <Divider></Divider>
-            <ListItem button className={classes.ListMenu} >
-                <ListItemIcon><MapIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='صفحه نقشه سامانه'>                  
-                </ListItemText>
-            </ListItem>
-            <Divider></Divider>                                                               
-            <ListItem button className={classes.ListMenu} >
-                <ListItemIcon><ViewListIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='مدیریت نقشه های ارسالی'>                  
-                </ListItemText>
-            </ListItem>
-            <Divider></Divider>
-            <ListItem button className={classes.ListMenu} >
-                <ListItemIcon><EventIcon fontSize='medium'/></ListItemIcon>
-                <ListItemText primary='رویدادها'>                  
+                <ListItemIcon><ExitToAppIcon fontSize='medium'/></ListItemIcon>
+                <ListItemText primary='خروج'>                  
                 </ListItemText>
             </ListItem>
             <Divider></Divider>

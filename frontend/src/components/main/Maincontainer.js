@@ -4,10 +4,7 @@ import { BrowserRouter, Switch , Route , Redirect ,withRouter } from 'react-rout
 import useStyles from './styles'
 import {connect} from 'react-redux'
 import clsx from 'clsx';
-import DatePicker from "react-multi-date-picker"
-import { Calendar } from "react-multi-date-picker"
-import persian from "react-date-object/calendars/persian"
-import persian_fa from "react-date-object/locales/persian_fa"
+
 
 const Maincontainer = (props) => {
     const classes = useStyles()

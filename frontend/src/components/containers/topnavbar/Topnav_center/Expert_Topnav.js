@@ -25,7 +25,7 @@ const Expert_Topnav = (props) => {
     const classes = useStyles()
     const [value, setValue] = React.useState(null);
     const handleNavigationRoute = (route)=>{
-        
+        // console.log(route)
         history.push(route)  
     }
     return (
@@ -58,7 +58,10 @@ const Expert_Topnav = (props) => {
                             <BottomNavigationAction
                              className = {classes.BottomNavigationAction}
                              label= 'ترسیم نقشه'
-                             icon={<MapIcon fontSize='medium'/>} />
+                             icon={<MapIcon fontSize='medium'/>}
+                             onClick={()=>handleNavigationRoute('/draw_map')}
+                              />
+                            
                             <BottomNavigationAction
                              className = {classes.BottomNavigationAction}
                              label= ' مدیریت نقشه ها'

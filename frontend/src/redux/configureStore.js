@@ -7,6 +7,7 @@ import {initState as SideMenuInitState , rootReducer as SideMenuReducer}  from '
 import {initState as AuthInitState , rootReducer as AuthReducer}  from './Authentication/reducers'
 import {initState as ImpoertMapInitState , rootReducer as ImportMapReducer}  from './ImportMap/reducers'
 import {initState as WebGISInitState , rootReducer as WebGISReducer}  from './WebGIS/reducers'
+import {initState as DrawMapInitState , rootReducer as DrawMapReducer}  from './DrawMap/reducers'
 // const Middleware = [thunk]
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [sagaMiddleware];
@@ -17,12 +18,14 @@ const ConfigStore = ()=>{
         auth:AuthReducer,
         import_map:ImportMapReducer,
         webgis:WebGISReducer,
+        draw_map:DrawMapReducer,
     }),
     {
         sidemenu:SideMenuInitState,
         auth:AuthInitState,
         import_map:ImpoertMapInitState,
-        webgis:WebGISInitState
+        webgis:WebGISInitState,
+        draw_map:DrawMapInitState,
     },
     composeWithDevTools(applyMiddleware(...middlewares)) 
     ) 
