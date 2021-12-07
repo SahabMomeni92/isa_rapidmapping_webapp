@@ -99,14 +99,20 @@ const Import_Layer = () =>{
     const dispatch = useDispatch()
     
     const classes = useStyles()
-    const [radiovalue, setRadiovalue] = React.useState('import');
+    const [radiovalue, setRadiovalue] = React.useState('select');
     const [age, setAge] = React.useState('');
     const [message, setMessage] = useState("لطفاً یک فایل رستر معتبر وارد کنید");  
     const [open, setOpen] = React.useState(false);
     const [alert,setAlert] = React.useState('info');
     const [alertVariant,setAlertVariant] = React.useState('outlined');
+    const [first_loading,setfirst_loading] = React.useState(true)
     useEffect( () => {      
       dispatch({type:GET_DISASTER_WATCH})   
+    },[])
+    useEffect( () => {      
+      if(disaster_list && first_loading){
+        setRadiovalue('import')
+      } 
     },[])
     const handleChange = (event) => {
         setRadiovalue(event.target.value);
@@ -314,6 +320,7 @@ const Import_Layer = () =>{
       setLayerName(e.target.value)
     }
     const handleDisasterChange = (event) => {
+      setfirst_loading(false)
       let id = event.target.value
       console.log(id);
       console.log(disaster_list)
@@ -423,8 +430,9 @@ const Import_Layer = () =>{
                         </RadioGroup>
                     </Grid>      
                     <Grid xs={12} sm={9} className={classes.formContainerRadiobottom}>    
+                        
                         <Box >
-                          {radiovalue === 'select' ? <SelectLayer/> : <ImportLayer layer_name={LayerName}
+                          {radiovalue === 'select'  ? <SelectLayer/> : <ImportLayer layer_name={LayerName}
                            disaster={Disaster.workspace} 
                            disaster_name = {Disaster.name}
                            disaster_id = {Disaster.disaster_id}

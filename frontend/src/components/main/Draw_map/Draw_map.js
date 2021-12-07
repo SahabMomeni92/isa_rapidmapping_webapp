@@ -14,7 +14,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import {GET_DISASTER_LIST, LAYER_IMPOERT_FAIL} from '../../../redux/ImportMap/types'
 import {Main as ImportMap_step2} from './DrawMap_step2/Main';
-import {Main as ImportMap_step3} from './ImpoertMap_step3/Main'
+import {Main as ImportMap_step3} from './DrawMap_step3/Main'
 import { getDisasterList } from '../../../api/api_disaster';
 import { GET_WMSCapabilities_RESET } from '../../../redux/WebGIS/types';
 
@@ -25,7 +25,7 @@ function Alert(props) {
 
 
 const getSteps = ()=>(
-    ['وارد کردن فایل رستری سیلاب', 'وارد کردن اطلاعات داده ها', 'انتخاب مناطق درگیر سیلاب']
+    ['وارد کردن فایل رستری سیلاب', 'وارد کردن اطلاعات داده ها', 'اطلاعات مناطق درگیر سیلاب']
 )
 
 
@@ -34,12 +34,14 @@ const getStepContent =(step)=>{
     
     switch (step) {
         case 0:
-            return <div></div>
-            // return <Import_Layer  />
+            // return <ImportMap_step3/>
+            // return <div></div>
+            return <Import_Layer  />
             // return <ImportMap_step3/>
         case 1:
             return (
                 <div>
+                        {/* <ImportMap_step3/> */}
                         <ImportMap_step2/>                     
                 </div>
                 
@@ -78,7 +80,7 @@ const Draw_map = () => {
             return
         }
         if (activeStep===1 && !is_DataInformationImported){
-            setMessage('لطفاْ اطلاهات فرم را به طور کامل تکمیل کنید')
+            setMessage('لطقاً اطلاعات فرم را به طور کامل تکمیل کنید')
             setOpen(true)
             setAlert('warning')
             return
