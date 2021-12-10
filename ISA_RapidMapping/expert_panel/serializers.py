@@ -12,6 +12,6 @@ class ExpertMapSerializers(serializers.ModelSerializer):
 class DrawMapSerializers(serializers.ModelSerializer):
     
     class Meta:
-        model = Expert_map  
+        model = Draw_map  
         # date = serializers.DateTimeField
         fields = '__all__'        
