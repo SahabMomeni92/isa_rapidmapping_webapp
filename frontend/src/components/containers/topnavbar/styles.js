@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme=>(
                 backgroundColor:'rgb(255, 255, 255) !important',
                 height:'4rem',
                 flexDirection:'row !important',
-                zIndex:theme.zIndex.drawer + 1,
+                // zIndex:theme.zIndex.drawer + 1,
                 display:''
         },
         topnav_right:{

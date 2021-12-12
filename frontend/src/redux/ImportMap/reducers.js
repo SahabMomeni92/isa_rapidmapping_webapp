@@ -6,6 +6,7 @@ const initState = {
     has_layer : false,
     disaster_list : null,
     importedMap_id:9,
+    importedMapDetails:null,
 }
 
 const rootReducer = (state = initState,action) =>{
@@ -23,7 +24,11 @@ const rootReducer = (state = initState,action) =>{
         case actions.MAP_IMPORT_SUCCESS:
             return {...state,importedMap_id:payload}    
         case actions.MAP_IMPORT_FAIL:
-            return {...state,importedMap_id:null}                 
+            return {...state,importedMap_id:null}       
+        case actions.GET_IMPORTEDMAPDETAIS_SUCCESS:
+                return {...state,importedMapDetails:payload}    
+        case actions.GET_IMPORTEDMAPDETAIS_FAIL:
+                return {...state,importedMapDetails:null}             
         default:
             return state    
     }

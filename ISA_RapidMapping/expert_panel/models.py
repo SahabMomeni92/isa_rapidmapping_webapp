@@ -31,3 +31,27 @@ class Expert_map(models.Model):
          return reverse("expertmap_detail", kwargs={"pk": self.pk})
 
     
+class Draw_map(models.Model):
+    tiff_file = models.ForeignKey(GeospatialFile, on_delete=models.SET_NULL,null=True)
+    disaster = models.ForeignKey(to='manager_panel.Disaster',on_delete=models.CASCADE,verbose_name='نام مخاطره')
+    sat = models.CharField(max_length=300,verbose_name='نام ماهواره تصویر')
+    disaster_date = models.DateField(verbose_name='تاریخ حادثه')
+    image_date = models.DateField(verbose_name='تاریخ اخذ تصویر')
+    proccess_date = models.DateField(verbose_name='تاریخ پردازش تصویر')
+    title =  models.CharField(max_length=300,verbose_name='نام منطقه تحت تاثیر سیلاب ')
+    total_city = models.IntegerField(verbose_name='تعداد شهرهای تحت تاثیر سیلاب')
+    total_vilage = models.IntegerField(verbose_name='تعداد روستاهای تحت تاثیر سیلاب')   
+    total_hamlet = models.IntegerField(verbose_name='تعداد دهکده های تحت تاثیر سیلاب')
+    total_pop = models.IntegerField(verbose_name='جمعیت تحت تاثیر سیلاب')
+    description = models.TextField(help_text='توضیحات نقشه', blank=True,null=True,verbose_name='توضیحات')
+    export_image =  models.FileField(upload_to='images/draw_map/image_export',verbose_name='فایل نقشه',default=None )
+    system_name = models.CharField(max_length=300,verbose_name='نام  سیستمی', unique=True,blank=True)
+    # class Meta:
+    #     verbose_name = _("Draw_map")
+    #     verbose_name_plural = _("Draw_maps")
+
+    # def __str__(self):
+    #     return self.name
+
+    # def get_absolute_url(self):
+    #     return reverse("Draw_map_detail", kwargs={"pk": self.pk})

@@ -7,6 +7,9 @@ const theme = createTheme({
             fontFamily:'Yekan !important',
         }
        },
+       MuiDrawer:{
+            direction:'ltr !important'
+       },
        MuiIconButton:{
            root:{
                padding:'0',

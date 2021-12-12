@@ -14,5 +14,6 @@ urlpatterns = [
     path('manager_panel/createdisaster/',managerView.DisasterView.as_view()),
     path('expert_panel/expertmap/',expertView.ExpertMap_List.as_view()),
     path('expert_panel/expertmap/<int:pk>/',expertView.ExpertMap_Detail.as_view()),
-
+    path('expert_panel/insertdrawmap/',expertView.InsertDrawMap.as_view()),
+    path('expert_panel/drawmap/<int:pk>/',expertView.DrawMap_Detail.as_view()),
 ]

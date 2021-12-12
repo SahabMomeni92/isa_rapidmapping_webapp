@@ -13,6 +13,7 @@ import {useSelector,useDispatch} from 'react-redux'
 import {createBrowserHistory } from 'history';
 import BlankPage from './components/main/BlankPage';
 import Import_map from './components/main/import_map/Import_map';
+import Draw_map from './components/main/Draw_map/Draw_map';
 
  
 function App() {
@@ -30,6 +31,9 @@ function App() {
               <Switch>
                 <Route path= '/import_map' exact>
                   <Applayout><Import_map page_name='افزودن نقشه'/></Applayout>
+                </Route>
+                <Route path= '/draw_map' exact>
+                  <Applayout><Draw_map page_name='ترسیم نقشه'/></Applayout>
                 </Route>
                 <Route path= '/' exact>
                   <Applayout><BlankPage page_name='خانه'/></Applayout>
