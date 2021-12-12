@@ -17,6 +17,7 @@ import {Main as ImportMap_step2} from './DrawMap_step2/Main';
 import {Main as ImportMap_step3} from './DrawMap_step3/Main'
 import { getDisasterList } from '../../../api/api_disaster';
 import { GET_WMSCapabilities_RESET } from '../../../redux/WebGIS/types';
+import { DrawMap_api } from '../../../api/api_drawMap';
 
 
 function Alert(props) {
@@ -60,6 +61,8 @@ const getStepContent =(step)=>{
 const Draw_map = () => {
     const dispatch = useDispatch()
     const is_DataInformationImported = useSelector(state => state.draw_map.is_DataInformationImported)
+    const is_mapDataInserted = useSelector(state => state.draw_map.is_mapDataInserted)
+    const insertmap = useSelector(state => state.draw_map.InsertMap)
     const has_layer = useSelector(state=> state.import_map.has_layer)
     const classes = useStyles()
     const [activeStep, setActiveStep] = React.useState(0);
@@ -84,6 +87,16 @@ const Draw_map = () => {
             setOpen(true)
             setAlert('warning')
             return
+        }
+        if (activeStep===2 && !is_mapDataInserted){
+            setMessage('لطقاً اطلاعات فرم را به طور کامل تکمیل کنید')
+            setOpen(true)
+            setAlert('warning')
+            return
+        }
+        if (activeStep===2 && is_mapDataInserted && insertmap){
+            console.log('ok e')
+            DrawMap_api(insertmap.id)
         }
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
       };
@@ -128,7 +141,7 @@ const Draw_map = () => {
                             style={{textAlign:'right'}}
                             // disabled={validation === false}
                         >
-                            {activeStep === steps.length - 1 ?<Typography>تایید نهایی</Typography> : <Typography>بعدی</Typography>}
+                            {activeStep === steps.length - 1 ?<Typography>ترسیم نقشه</Typography> : <Typography>بعدی</Typography>}
                         </Button>
                         </div>
                     </div>

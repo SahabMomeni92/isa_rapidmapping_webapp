@@ -3,10 +3,10 @@ import { withStyles } from '@material-ui/styles';
 import React , {useState,useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import useStyles from './styles'
-import { GET_IMPORTEDMAPDETAIS_WATCH } from '../../../../redux/ImportMap/types';
-import Map_card from '../../../cards/Map_card';
 import Alert from '@material-ui/lab/Alert';
 import DrawMapLocations_map from '../../../Maps/DrawMapLocations_map/DrawMapLocations_map';
+import { InsertDrawMap_api } from '../../../../api/api_drawMap';
+import { DrawMap_INSERT_SUCCESS, DrawMap_INSERT_FAIL } from '../../../../redux/DrawMap/types';
 const StyledTextField = withStyles({
     root: {
       
@@ -63,7 +63,8 @@ const DrawMap_FloodLocations = (props) => {
     const [map_description,setMap_description] =  React.useState(''); 
     const [pop,setPop] =  React.useState(''); 
     const [selectedFiles, setSelectedFiles] = useState(undefined);
-    
+    const layer_informations = useSelector(state => state.import_map.layer_informations) 
+    const drawMap_data = useSelector(state => state.draw_map.DataInformation) 
     const handleTitleChange = (e)=>{
       
       setMap_title(e.target.value)}
@@ -84,28 +85,50 @@ const DrawMap_FloodLocations = (props) => {
       setMap_description(e.target.value)
     }   
     const handleMapUpload = (e)=>{      
-      const formData = new FormData();
-      // formData.append('disaster',layer_informations.disaster_id)
-      // formData.append('title',map_title)
-      // formData.append('author',`${user.first_name} ${user.last_name}`)
-      // formData.append('date',mapDate_ref.current.children[0].value.replace("/", "-").replace("/","-"))
-      // formData.append('description',map_description)
+      setMessage('لطفاً چند لخظه منتظر بمانید');
+      // const formData = new FormData();
       // formData.append('tiff_file',layer_informations.layer_id)
-      // formData.append('img_file',selectedFiles)
-      // importMap_api(formData)
-      // .then(resp=>{
-      //     dispatch({type:MAP_IMPORT_SUCCESS,payload:resp.data.id})
-      //     setMessage('نقشه با موفقیت اضافه شد');
-      //     setAlert('success')
-      //     setAlertVariant('filled')
-      // })
-      // .catch(err=>{
-      //     dispatch({type:MAP_IMPORT_FAIL})
-      //     console.log(err)
-      //     setMessage('فرایند اضافه کردن نقشه موفقیت آمیز نبود');
-      //     setAlert('error')
-      //     setAlertVariant('filled')
-      // })
+      // formData.append('disaster',layer_informations.disaster_id)
+      // formData.append('sat',drawMap_data.LayerSat)
+      // formData.append('disaster_date',drawMap_data.DisasterDate)
+      // formData.append('proccess_date',drawMap_data.ProccessDate)
+      // formData.append('image_date',drawMap_data.ImageDate)
+      // formData.append('title',map_title)
+      // formData.append('total_city',map_totalCity)
+      // formData.append('total_vilage',map_totalVilage)
+      // formData.append('total_hamlet',map_totalHamlet)
+      // formData.append('total_pop',pop)
+      // formData.append('description',map_description)
+      // formData.append('system_name',map_description)
+      // console.log(formData)
+      const formData = {'tiff_file':layer_informations.layer_id,
+                  'disaster':layer_informations.disaster_id,
+                  'sat':drawMap_data.LayerSat,
+                  'disaster_date':drawMap_data.DisasterDate,
+                  'proccess_date':drawMap_data.ProccessDate,
+                  'image_date':drawMap_data.ImageDate,
+                  'title':map_title,
+                  'total_city':map_totalVilage,
+                  'total_vilage':map_totalVilage,
+                  'total_hamlet':map_totalHamlet,
+                  'total_pop':pop,
+                  'description':map_description,
+                  'system_name':`drawMap_${layer_informations.system_name}`
+                  }
+      InsertDrawMap_api(formData)
+      .then(resp=>{
+          dispatch({type:DrawMap_INSERT_SUCCESS,payload:resp.data})
+          setMessage('اطلاعات با موفقیت وارد سرور شد برای ترسیم نقشه به مرحله بعدی بروید');
+          setAlert('success')
+          setAlertVariant('filled')
+      })
+      .catch(err=>{
+          dispatch({type:DrawMap_INSERT_FAIL})
+          console.log(err)
+          setMessage('فرایند اضافه کردن اطلاعات موفقیت آمیز نبود');
+          setAlert('error')
+          setAlertVariant('filled')
+      })
       }
     return (
         <Box className={classes.layerInfo}>

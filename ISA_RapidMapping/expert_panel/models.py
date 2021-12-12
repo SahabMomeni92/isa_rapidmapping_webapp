@@ -45,7 +45,7 @@ class Draw_map(models.Model):
     total_pop = models.IntegerField(verbose_name='جمعیت تحت تاثیر سیلاب')
     description = models.TextField(help_text='توضیحات نقشه', blank=True,null=True,verbose_name='توضیحات')
     export_image =  models.FileField(upload_to='images/draw_map/image_export',verbose_name='فایل نقشه',default=None )
-    system_name = models.CharField(max_length=300,verbose_name='نام  سیستمی', unique=True)
+    system_name = models.CharField(max_length=300,verbose_name='نام  سیستمی', unique=True,blank=True)
     # class Meta:
     #     verbose_name = _("Draw_map")
     #     verbose_name_plural = _("Draw_maps")
